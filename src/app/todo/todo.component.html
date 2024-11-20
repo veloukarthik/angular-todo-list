@@ -1,5 +1,8 @@
 <h1>{{title}}</h1>
-<input type="text" [(ngModel)]="todoTitle"><button (click)="todoEdit ? update() : AddTodo()">Submit</button>
+<input type="text" [(ngModel)]="todoTitle"><button (click)="todoEdit ? update() : AddTodo()">
+    <span *ngIf="todoEdit">UPDATE TODO</span>
+    <span *ngIf="!todoEdit">ADD TODO</span>
+</button>
 <ul>
     <li *ngFor="let todo of todos; let i=index;" (click)="editTodo(todo)">
           {{todo.title}} <button (click)="removeTodo(i)">&times;</button>

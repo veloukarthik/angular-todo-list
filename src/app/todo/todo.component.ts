@@ -12,7 +12,7 @@ export class TodoComponent implements OnInit {
   todoTitle: string = '';
   todo: any;
   todoEdit: boolean = false;
-  limit: number = 10;
+  limit: number = 20;
   page: number = 0;
   count: number = 0;
 
@@ -50,16 +50,12 @@ export class TodoComponent implements OnInit {
   prev() {
     if (this.page > 0) {
       this.page = this.page - this.limit;
-      console.log("prev",this.page);
       this.getTodos();
-
     }
-
   }
   next() {
-    if (this.page < this.count-10) {
+    if (this.page < this.count - 20) {
       this.page = this.page + this.limit;
-      console.log("next",this.page);
       this.getTodos();
     }
   }

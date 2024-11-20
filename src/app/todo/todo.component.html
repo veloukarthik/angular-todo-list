@@ -5,6 +5,6 @@
           {{todo.title}} <button (click)="removeTodo(i)">&times;</button>
     </li>
     <button [disabled]="this.page==0 ? true : false" (click)="prev()">Prev</button>&nbsp;
-    <button [disabled]="this.page==(this.count-10) ? true : false "  (click)="next()">Next</button>
+    <button [disabled]="this.page==(this.count-20) ? true : false "  (click)="next()">Next</button>
 </ul>
 
